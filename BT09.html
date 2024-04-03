@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let carts = [
+            {
+                product: "iphone",
+                price:6000,
+                quantity:20,
+            },
+            {
+                product: "iphone",
+                price:6000,
+                quantity:20,
+            },
+            {
+                product: "iphone",
+                price:6000,
+                quantity:20,
+            },
+            {
+                product: "iphone",
+                price:6000,
+                quantity:20,
+            },
+            {
+                product: "iphone",
+                price:6000,
+                quantity:20,
+            }
+        ]
+        let ruduce = carts.reduce((accumlator,currentValue,carts)=>{
+            return accumlator + currentValue.price * currentValue.quantity;
+        },0)
+        console.log(ruduce);
+    </script>
+</body>
+</html>

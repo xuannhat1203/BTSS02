@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = [
+            {
+                name: "Nguyễn Văn A",
+                address: "hà nội",
+                email: "nva@rikkei.com",
+            },
+            {
+                name: "Trần Văn Bình",
+                address: "hà nội",
+                email: "tvbinh@rikkei.com",
+            },
+            {
+                name: "hà nội",
+                address: "Thái Bình",
+                email: "nhanh@gmail.com",
+            },
+            {
+                name: "Lê Văn Nam",
+                address:"hà nội" ,
+                email: "lvnam@gmail.com",
+            },
+        ];
+        // endsWith(): xác định xem một chuỗi kết thúc bằng các ký tự của chuỗi này, trả về hay khi thích hợp
+        function filterByAddressAndEmail(users, city, email) {
+            return users.filter(user => {
+                return user.email.toLowerCase().endsWith(email.toLowerCase());
+            });
+        }
+        function findUserByAddressAndEmail(users, city, email) {
+            return users.find(user => {
+                    return user.email.toLowerCase().endsWith(email.toLowerCase());
+            });
+        }
+        console.log(filterByAddressAndEmail(users, "Thái Bình", "@gmail.com"));
+        console.log(findUserByAddressAndEmail(users, "Thái Bình", "@gmail.com"));
+    </script>
+</body>
+</html>
